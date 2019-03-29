@@ -1,0 +1,10 @@
+<h1>Episode #<%=@episode.number%></h1>
+
+
+<%= link_to "Add a guest appearance!", new_appearance_path %>
+
+<ul>
+  <%@episode.guests.each do |guest|%>
+    <li><%= guest.name%></li>
+  <%end%>
+</ul>
